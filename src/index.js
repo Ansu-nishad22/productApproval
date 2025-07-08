@@ -6,7 +6,7 @@ import { connectdb } from "./db/index.js"
 
 app.use(
     cors({
-        origin : process.env.CORS_ORIGIN,
+        origin: process.env.CORS_ORIGIN,
         credentials: true
 
     })
@@ -15,11 +15,11 @@ app.use(
 let port = process.env.PORT
 
 connectdb()
-.then(()=>{
-    app.listen(port , ()=>{
-    console.log(`server is running ${port}`);
-})
-})
-.catch((err) =>{
-    console.log("mongodb connection error")
-})
+    .then(() => {
+        app.listen(port, () => {
+            console.log(`server is running ${port}`);
+        })
+    })
+    .catch((err) => {
+        console.log("mongodb connection error")
+    })
