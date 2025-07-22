@@ -42,6 +42,8 @@ const login = async (req, res) => {
         { expiresIn: '1h' }
 
     )
+    console.log("h");
+    
 
     // res.status(200).json({message : "login successfull!!!"})
     res.json({ token })
